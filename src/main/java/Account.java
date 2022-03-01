@@ -1,3 +1,5 @@
+import io.qameta.allure.Step;
+
 import java.util.regex.Pattern;
 
 public class Account {
@@ -10,6 +12,7 @@ public class Account {
         this.name = name;
     }
 
+    @Step("check the string meets the requirements")
     public boolean checkNameToEmboss() {
         if (name != null){
             return name.matches(NAME_PATTERN);
